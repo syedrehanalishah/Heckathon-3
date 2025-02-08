@@ -6,7 +6,7 @@ import Products from '@/app/Units/Mock'
 
 
 // Define the initial state using that type
-const initialState : Iproduct [] = Products;
+const initialState  = Products;
 
 export const productSlice = createSlice({
   name: 'counter',

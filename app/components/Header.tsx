@@ -72,16 +72,16 @@ import {  AiFillCloseCircle } from 'react-icons/ai';
 import { TbShoppingBagX } from 'react-icons/tb';
 
 const Header = () => {
-const toggleCart = () => {
-if(ref.current.classList.contains('translate-x-full')){
- ref.current.classList.remove('translate-x-full')
- ref.current.classList.add('translate-x-0')
-}
-else if(!ref.current.classList.contains('translate-x-full')){
-   ref.current.classList.remove('translate-x-0')
-   ref.current.classList.add('translate-x-full')
-  }
-}
+// const toggleCart = () => {
+// if(ref.current.classList.contains('translate-x-full')){
+//  ref.current.classList.remove('translate-x-full')
+//  ref.current.classList.add('translate-x-0')
+// }
+// else if(!ref.current.classList.contains('translate-x-full')){
+//    ref.current.classList.remove('translate-x-0')
+//    ref.current.classList.add('translate-x-full')
+//   }
+// }
 const ref = useRef<HTMLDivElement>(null);
 
   return (
@@ -115,16 +115,17 @@ const ref = useRef<HTMLDivElement>(null);
         <IoHeartOutline className="text-black text-xl  hover:bg-black hover:text-white rounded-md" size={24} />
       </Link>
     </li>
+    <Link href="/cart">
     <li>
-     
-        <IoCartOutline onClick={toggleCart} className="text-black text-xl  hover:bg-black hover:text-white rounded-md cursor-pointer" size={24} />
-      
+        <IoCartOutline  className="text-black text-xl  hover:bg-black hover:text-white rounded-md cursor-pointer" size={24} />
     </li>
+    
+    </Link>
   </ul>
 </div>
-<div ref={ref} className="sideCart absolute top-0 right-0 w-[417px] h-[716px]  bg-[#ffffff] py-10 px-7 transform transition-transform translate-x-full">
+{/* <div ref={ref} className="sideCart absolute top-0 right-0 w-[417px] h-[716px]  bg-[#ffffff] py-10 px-7 transform transition-transform translate-x-full">
   <h1 className={`font-bold text-xl mt-[-10px] `}>Shopping Cart</h1>
-  <span onClick={toggleCart} className="absolute top-5  right-2 mr-[10px]  mt-[10px] text-2xl text-[#9F9F9F]"><TbShoppingBagX className='cursor-pointer' /> </span>
+  <span  className="absolute top-5  right-2 mr-[10px]  mt-[10px] text-2xl text-[#9F9F9F]"><TbShoppingBagX className='cursor-pointer' /> </span>
   <h3 className='w-[287px] h-[0px] border-[#D9D9D9] border-[1px] mt-[20px]'></h3>
   <ul>
 <li >
@@ -138,7 +139,7 @@ const ref = useRef<HTMLDivElement>(null);
 <Link href="/cart"><button className='w-[131px] h-[31px] border-[1px] border-[#000000] rounded-full ml-[50px] hover:bg-black hover:text-white mt-[50px]'>View Cart</button></Link>
 <Link href="/checkout"><button className='w-[131px] h-[31px] border-[1px] border-[#000000] rounded-full ml-[50px] hover:bg-black hover:text-white mt-[50px]'>Check Cart</button></Link>
   </div>
-</div>
+</div> */}
 </div>
 
     
